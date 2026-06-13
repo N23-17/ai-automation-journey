@@ -1,8 +1,12 @@
 lines = ["Name: Imran",
-         "Course: Computer Science",
+         "Course Computer Science",
          "Year: 3"]
 data = {}
 for line in lines:
-    key, value = line.split(":")
-    data[key.strip()] = value.strip()
+    try:
+        key, value = line.split(":")
+        data[key.strip()] = value.strip()
+
+    except ValueError:
+        print(f"Skipping invalid line: {line}")
 print(data)
