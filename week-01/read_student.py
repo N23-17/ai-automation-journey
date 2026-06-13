@@ -25,8 +25,6 @@ with open("week-01/student.txt", "r") as file:
 print("\nStudent Data:")
 print(content)
 
-from pathlib import Path
-
 current_file = Path(__file__)
 
 file_path = current_file.parent / "student.txt"
