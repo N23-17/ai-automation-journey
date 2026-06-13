@@ -15,11 +15,23 @@ if __name__ == "__main__":
 print(os.getcwd())
 
 
+
 print("Current Working Directory:")
 print(os.getcwd())
 
-with open("student.txt", "r") as file:
+with open("week-01/student.txt", "r") as file:
     content = file.read()
 
 print("\nStudent Data:")
 print(content)
+
+from pathlib import Path
+
+current_file = Path(__file__)
+
+file_path = current_file.parent / "student.txt"
+
+with open(file_path, "r") as file:
+    content = file.read()
+
+print(content.strip())
